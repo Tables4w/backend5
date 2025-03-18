@@ -94,7 +94,7 @@ func UpdateForm(f *types.Form, username string) (err error) {
 	}
 
 	defer db.Close()
-
+	//Проверять на изменение
 	var updatesql = []string{
 		"UPDATE forms ",
 		"SET fio = $2, tel = $3, email = $4, birth_date = $5, gender = $6, bio = $7 ",
